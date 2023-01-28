@@ -11,6 +11,10 @@
         
         echo json_encode($dischiJason);
 
+    }else{
+
+        $dischiJason = [];
+
     }
 
 

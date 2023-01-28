@@ -3,7 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            apiUrl: './api.php',
+            apiUrl: 'db/api.php',
             dischiList: [],
         }
     },
