@@ -5,6 +5,8 @@ createApp({
         return {
             apiUrl: 'db/api.php',
             dischiList: [],
+            clickIndex: 0,
+            indiceDisplay: 0,
         }
     },
     methods:{
@@ -14,6 +16,13 @@ createApp({
                 console.log(responde.data)
                 this.dischiList = responde.data
             }) 
+        },
+        getMoreInfo(indice){
+            this.indiceDisplay = 1;
+            this.clickIndex = indice;
+        },
+        closeInfo(){
+            this.indiceDisplay = 0;
         }
     },
     created(){
