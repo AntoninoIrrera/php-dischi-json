@@ -5,19 +5,14 @@
     
     $dischiJason = json_decode($dischiJason, true);
 
-    if(isset($dischiJason)){
+    if(!isset($dischiJason)){
         
-        header('Content-Type: application/json');
+        $dischiJason = [];    
         
-        echo json_encode($dischiJason);
-
-    }else{
-
-        $dischiJason = [];
-
     }
-
-
-
+    
+    header('Content-Type: application/json');
+    
+    echo json_encode($dischiJason);
 
 ?>
